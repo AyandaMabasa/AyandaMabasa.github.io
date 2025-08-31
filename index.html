@@ -8,7 +8,7 @@
 <style>
   * { box-sizing: border-box; margin:0; padding:0; scroll-behavior: smooth; }
   body { font-family: 'Poppins', sans-serif; background: #f0f4f8; color: #333; line-height:1.6; }
-  
+
   header {
     background: linear-gradient(to right, #4a90e2, #007BFF);
     color: #fff;
@@ -26,9 +26,18 @@
   nav a { color:#fff; text-decoration:none; margin:0 10px; font-weight:600; transition: color 0.3s; }
   nav a:hover { color:#ffea00; }
 
-  section { background: #fff; padding:30px; margin:30px auto; max-width:900px; border-radius:12px; box-shadow:0 4px 12px rgba(0,0,0,0.06); opacity:0; transform: translateY(30px); transition: all 0.8s ease-out; }
+  section {
+    background: #fff;
+    padding:30px;
+    margin:30px auto;
+    max-width:900px;
+    border-radius:12px;
+    box-shadow:0 4px 12px rgba(0,0,0,0.06);
+    opacity:0;
+    transform: translateY(30px);
+    transition: all 0.8s ease-out;
+  }
   section.visible { opacity:1; transform: translateY(0); }
-  
   section h2 { color:#007BFF; margin-bottom:15px; }
 
   ul { padding-left:20px; }
@@ -44,6 +53,8 @@
     cursor: pointer;
   }
   .project-card:hover { transform: translateY(-8px) rotate(-1deg); box-shadow:0 8px 20px rgba(0,0,0,0.15); }
+  .project-card a { display:block; margin-top:10px; color:#007BFF; text-decoration:none; font-weight:600; }
+  .project-card a:hover { text-decoration:underline; }
 
   .skills { display:flex; flex-wrap: wrap; gap:10px; }
   .skill { background:#007BFF; color:#fff; padding:5px 10px; border-radius:8px; font-size:0.9rem; }
@@ -101,12 +112,12 @@
     <div class="project-card">
       <h3>Chatbot</h3>
       <p>A simple AI chatbot built with HTML, CSS, and JavaScript that responds to user input.</p>
-      <a href="#">View Project</a>
+      <a href="https://ayandamabasa.github.io/chatbot/" target="_blank">View Project</a>
     </div>
     <div class="project-card">
       <h3>Todo List App</h3>
       <p>A web application to manage tasks, featuring add, delete, and mark-complete functionality.</p>
-      <a href="#">View Project</a>
+      <a href="https://ayandamabasa.github.io/todo-list-app/" target="_blank">View Project</a>
     </div>
   </div>
 </section>
@@ -118,7 +129,7 @@
 
 <section id="contact">
   <h2>Contact</h2>
-  <p>📧 <a href="mailto:ayandamabasa@gmail.com">ayandamabasa@gmail.com</a> | <a href="#">GitHub</a> | <a href="#">LinkedIn</a></p>
+  <p>📧 <a href="mailto:ayandamabasa@gmail.com">ayandamabasa@gmail.com</a> | <a href="https://github.com/ayandamabasa" target="_blank">GitHub</a> | <a href="#" target="_blank">LinkedIn</a></p>
 </section>
 
 <footer>
@@ -141,4 +152,3 @@
 
 </body>
 </html>
-
