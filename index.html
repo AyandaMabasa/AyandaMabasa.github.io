@@ -1,122 +1,144 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Precious Mabasa - Portfolio</title>
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
-  <style>
-    * {
-      box-sizing: border-box;
-      margin: 0;
-      padding: 0;
-    }
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Ayanda Mabasa - Portfolio</title>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+<style>
+  * { box-sizing: border-box; margin:0; padding:0; scroll-behavior: smooth; }
+  body { font-family: 'Poppins', sans-serif; background: #f0f4f8; color: #333; line-height:1.6; }
+  
+  header {
+    background: linear-gradient(to right, #4a90e2, #007BFF);
+    color: #fff;
+    text-align:center;
+    padding:60px 20px;
+    border-radius:0 0 20px 20px;
+    position: sticky;
+    top:0;
+    z-index: 100;
+  }
+  header h1 { font-size:2.5rem; margin-bottom:10px; }
+  header p { font-size:1.2rem; }
 
-    body {
-      font-family: 'Poppins', sans-serif;
-      background: #f0f4f8;
-      color: #333;
-      line-height: 1.6;
-      padding: 0 20px;
-    }
+  nav { margin-top:15px; }
+  nav a { color:#fff; text-decoration:none; margin:0 10px; font-weight:600; transition: color 0.3s; }
+  nav a:hover { color:#ffea00; }
 
-    header {
-      background: linear-gradient(to right, #4a90e2, #007BFF);
-      color: white;
-      padding: 60px 20px;
-      text-align: center;
-      border-radius: 0 0 20px 20px;
-    }
+  section { background: #fff; padding:30px; margin:30px auto; max-width:900px; border-radius:12px; box-shadow:0 4px 12px rgba(0,0,0,0.06); opacity:0; transform: translateY(30px); transition: all 0.8s ease-out; }
+  section.visible { opacity:1; transform: translateY(0); }
+  
+  section h2 { color:#007BFF; margin-bottom:15px; }
 
-    header h1 {
-      font-size: 2.5rem;
-      margin-bottom: 10px;
-    }
+  ul { padding-left:20px; }
 
-    header p {
-      font-size: 1.2rem;
-    }
+  .projects { display: flex; flex-wrap: wrap; gap:20px; }
+  .project-card {
+    background:#f7f9fc;
+    padding:20px;
+    flex:1 1 250px;
+    border-radius:12px;
+    box-shadow:0 4px 8px rgba(0,0,0,0.05);
+    transition: transform 0.4s, box-shadow 0.4s;
+    cursor: pointer;
+  }
+  .project-card:hover { transform: translateY(-8px) rotate(-1deg); box-shadow:0 8px 20px rgba(0,0,0,0.15); }
 
-    section {
-      background: #fff;
-      padding: 30px;
-      margin: 30px auto;
-      max-width: 900px;
-      border-radius: 12px;
-      box-shadow: 0 4px 12px rgba(0,0,0,0.06);
-    }
+  .skills { display:flex; flex-wrap: wrap; gap:10px; }
+  .skill { background:#007BFF; color:#fff; padding:5px 10px; border-radius:8px; font-size:0.9rem; }
 
-    h2 {
-      color: #007BFF;
-      margin-bottom: 15px;
-    }
+  footer { text-align:center; padding:20px; color:#888; font-size:0.9rem; margin-bottom:30px; }
 
-    ul {
-      padding-left: 20px;
-    }
+  a { color:#007BFF; text-decoration:none; }
+  a:hover { text-decoration:underline; }
 
-    footer {
-      text-align: center;
-      padding: 20px;
-      color: #888;
-      font-size: 0.9rem;
-      margin-bottom: 30px;
-    }
-
-    a {
-      color: #007BFF;
-      text-decoration: none;
-    }
-
-    a:hover {
-      text-decoration: underline;
-    }
-
-    /* Optional: Add responsive tweaks */
-    @media (max-width: 600px) {
-      header h1 {
-        font-size: 2rem;
-      }
-
-      section {
-        padding: 20px;
-      }
-    }
-  </style>
+  @media (max-width: 600px) {
+    header h1 { font-size:2rem; }
+    section { padding:20px; }
+    .projects { flex-direction: column; }
+  }
+</style>
 </head>
 <body>
 
-  <header>
-    <h1>Precious Mabasa</h1>
-    <p>Final Year BSc Computer Science & GIS Student</p>
-  </header>
+<header>
+  <h1>Ayanda Mabasa</h1>
+  <p>Final Year BSc Computer Science & GIS Student</p>
+  <nav>
+    <a href="#about">About</a>
+    <a href="#skills">Skills</a>
+    <a href="#projects">Projects</a>
+    <a href="#certifications">Certifications</a>
+    <a href="#contact">Contact</a>
+  </nav>
+</header>
 
-  <section>
-    <h2>About Me</h2>
-    <p>I am a passionate final-year student pursuing a BSc in Computer Science and GIS. I’m focused on building a strong foundation in technology through practical learning, and I have completed several professional online certifications to enhance my skillset and job readiness.</p>
-  </section>
+<section id="about">
+  <h2>About Me</h2>
+  <p>I am a passionate final-year student focused on building strong tech skills. I have completed professional certifications to enhance my expertise and job readiness.</p>
+</section>
 
-  <section>
-    <h2>Certifications</h2>
-    <ul>
-      <li>Artificial Intelligence Fundamentals – IBM SkillsBuild</li>
-      <li>Cloud Computing Fundamentals – IBM SkillsBuild</li>
-      <li>Agile Explorer – IBM SkillsBuild</li>
-      <li>Data Fundamentals – IBM SkillsBuild</li>
-      <li>Cybersecurity Fundamentals – IBM SkillsBuild</li>
-      <li>Web Development Fundamentals – IBM SkillsBuild</li>
-    </ul>
-  </section>
+<section id="skills">
+  <h2>Skills & Modules</h2>
+  <div class="skills">
+    <span class="skill">Java</span>
+    <span class="skill">C++</span>
+    <span class="skill">SQL</span>
+    <span class="skill">ArcGIS</span>
+    <span class="skill">QGIS</span>
+    <span class="skill">Web Development</span>
+    <span class="skill">Networking</span>
+    <span class="skill">Remote Sensing</span>
+    <span class="skill">Database Design</span>
+    <span class="skill">Software Engineering</span>
+  </div>
+</section>
 
-  <section>
-    <h2>Projects</h2>
-    <p>More projects coming soon! Stay tuned.</p>
-  </section>
+<section id="projects">
+  <h2>Projects</h2>
+  <div class="projects">
+    <div class="project-card">
+      <h3>Chatbot</h3>
+      <p>A simple AI chatbot built with HTML, CSS, and JavaScript that responds to user input.</p>
+      <a href="#">View Project</a>
+    </div>
+    <div class="project-card">
+      <h3>Todo List App</h3>
+      <p>A web application to manage tasks, featuring add, delete, and mark-complete functionality.</p>
+      <a href="#">View Project</a>
+    </div>
+  </div>
+</section>
 
-  <footer>
-    <p>📧 <a href="mailto:preciousmabasa684@gmail.com">preciousmabasa684@gmail.com</a></p>
-  </footer>
+<section id="certifications">
+  <h2>Certifications</h2>
+  <p>Completed professional certifications in AI, Cloud Computing, Web Development, Cybersecurity, and Data Fundamentals via IBM SkillsBuild.</p>
+</section>
+
+<section id="contact">
+  <h2>Contact</h2>
+  <p>📧 <a href="mailto:ayandamabasa@gmail.com">ayandamabasa@gmail.com</a> | <a href="#">GitHub</a> | <a href="#">LinkedIn</a></p>
+</section>
+
+<footer>
+  &copy; 2025 Ayanda Mabasa
+</footer>
+
+<script>
+  // Animate sections on scroll
+  const sections = document.querySelectorAll('section');
+  const observer = new IntersectionObserver(entries => {
+    entries.forEach(entry => {
+      if(entry.isIntersecting){
+        entry.target.classList.add('visible');
+      }
+    });
+  }, { threshold: 0.1 });
+
+  sections.forEach(section => observer.observe(section));
+</script>
+
 </body>
 </html>
-      
-   
+
